@@ -13,7 +13,7 @@ const projectInfo = [
   { icon: BookOpen, label: 'Department', value: 'Computer Science and Engineering', color: 'text-cyber-secondary' },
   { icon: Award, label: 'Guide', value: 'Ms. Venkata Lakshmi, M.Tech', color: 'text-cyber-accent' },
   { icon: Calendar, label: 'Duration', value: '20 April 2026 – 18 June 2026', color: 'text-cyber-warning' },
-  { icon: MapPin, label: 'Location', value: 'Akkampalle Village, Kurnool District, Andhra Pradesh', color: 'text-cyber-error' },
+  { icon: MapPin, label: 'Location', value: 'Akkampalle Village, Anantapur District, Andhra Pradesh', color: 'text-cyber-error' },
   { icon: Users, label: 'Participants', value: '60+ Community Members Reached', color: 'text-cyber-purple' },
 ];
 
