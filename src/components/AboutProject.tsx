@@ -2,9 +2,9 @@ import { GraduationCap, MapPin, Calendar, Users, BookOpen, Award } from 'lucide-
 
 const teamMembers = [
   { name: 'Shaik Mohammad Abrarul Haq', reg: '24F21A05F5', role: 'Project Lead' },
-  { name: 'Divvala Naveen', reg: '24F21A0XXX', role: 'Team Member' },
-  { name: 'Siddha Nikhil', reg: '24F21A0XXX', role: 'Team Member' },
-  { name: 'Vajrala Tharakeshwar', reg: '24F21A0XXX', role: 'Team Member' },
+  { name: 'Divvala Naveen Sai', reg: '24F21A0XXX', role: 'Team Member' },
+  { name: 'Sidda Nikhil', reg: '24F21A0XXX', role: 'Team Member' },
+  { name: 'Vajrala Tharakeshwar Mouryan Vyas', reg: '24F21A0XXX', role: 'Team Member' },
   { name: 'Chenna Mahendra', reg: '24F21A0XXX', role: 'Team Member' },
 ];
 
