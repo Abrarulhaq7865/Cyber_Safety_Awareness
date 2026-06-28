@@ -22,7 +22,8 @@ const resources = [
     bg: 'bg-cyber-primary/5',
     border: 'border-cyber-primary/30',
     size: '1.1 MB',
-    href: '#',
+    href: '/public/images
+/top-10-cyber-safety-tips.pdf',
     isFile: false,
   },
   {
@@ -34,7 +35,8 @@ const resources = [
     bg: 'bg-cyber-accent/5',
     border: 'border-cyber-accent/30',
     size: '890 KB',
-    href: '#',
+    href: '/public/images
+/safe-upi-practices-guide.pdf',
     isFile: false,
   },
   {
@@ -46,7 +48,8 @@ const resources = [
     bg: 'bg-cyber-warning/5',
     border: 'border-cyber-warning/30',
     size: '320 KB',
-    href: '#',
+    href: '/public/images
+/cybercrime-helpline-reference.pdf',
     isFile: false,
   },
   {
@@ -58,7 +61,8 @@ const resources = [
     bg: 'bg-cyber-secondary/5',
     border: 'border-cyber-secondary/30',
     size: '1.8 MB',
-    href: '#',
+    href: '/public/images
+/digital-literacy-brochure.pdf',
     isFile: false,
   },
   {
@@ -70,7 +74,8 @@ const resources = [
     bg: 'bg-cyber-purple/5',
     border: 'border-cyber-purple/30',
     size: '650 KB',
-    href: '#',
+    href: '/public/images
+/phishing-detection-infographic.pdf',
     isFile: false,
   },
 ];
