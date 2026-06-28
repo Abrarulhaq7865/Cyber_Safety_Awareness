@@ -36,7 +36,7 @@ const weeks = [
       'Visited local shopkeepers and storefront owners to discuss basic everyday smartphone security.',
       'Held brief, spontaneous conversations with village youth at public spots to answer their safety queries.',
     ],
-    outcome: '80 bilingual cyber  tips,threats and 5 display charts completed',
+    outcome: 'Educated shopkeepers and residents on basic digital safety using visual bilingual banners.',
   },
   {
     week: 3,
@@ -88,7 +88,7 @@ const weeks = [
       'Discussed safe e-commerce habits and how to avoid making advance payments to unverified online marketplace frauds.',
       'Distributed simple digital safety checklists to help individual families maintain everyday mobile device security.',
     ],
-    outcome: '55+ students participated; parents equipped with child safety tools',
+    outcome: 'Taught 45+ residents to identify phone scams and manage risky mobile app permissions.',
   },
   {
     week: 6,
@@ -123,7 +123,7 @@ const weeks = [
       'Acknowledged the active participation of the quiz players and youth volunteers in a casual gathering',
       'Held a wrap-up discussion to address remaining community doubts and build digital safety confidence.',
     ],
-    outcome: '5 Ambassadors trained; 60+ participated in quiz competition',
+    outcome: 'Trained 5 youth Cyber Safety Ambassadors and tested 20+ residents with an interactive quiz.',
   },
   {
     week: 8,
