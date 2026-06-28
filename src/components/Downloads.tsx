@@ -23,7 +23,7 @@ const resources = [
     border: 'border-cyber-primary/30',
     size: '1.1 MB',
     href: '/public/images/top-10-cyber-safety-tips.pdf',
-    isFile: false,
+    isFile: true,
   },
   {
     title: 'Safe UPI Practices Guide',
@@ -35,7 +35,7 @@ const resources = [
     border: 'border-cyber-accent/30',
     size: '890 KB',
     href: '/public/images/safe-upi-practices-guide.pdf',
-    isFile: false,
+    isFile: true,
   },
   {
     title: 'Cybercrime Helpline Reference Card',
@@ -47,7 +47,7 @@ const resources = [
     border: 'border-cyber-warning/30',
     size: '320 KB',
     href: '/public/images/cybercrime-helpline-reference.pdf',
-    isFile: false,
+    isFile: true,
   },
   {
     title: 'Digital Literacy Brochure',
@@ -59,7 +59,7 @@ const resources = [
     border: 'border-cyber-secondary/30',
     size: '1.8 MB',
     href: '/public/images/digital-literacy-brochure.pdf',
-    isFile: false,
+    isFile: true,
   },
   {
     title: 'Phishing Detection Infographic',
@@ -71,7 +71,7 @@ const resources = [
     border: 'border-cyber-purple/30',
     size: '650 KB',
     href: '/public/images/phishing-detection-infographic.pdf',
-    isFile: false,
+    isFile: true,
   },
 ];
 
