@@ -10,7 +10,7 @@ const resources = [
     bg: 'bg-cyber-error/5',
     border: 'border-cyber-error/30',
     size: '2.4 MB',
-    href: '/src/data/reports/abrar.pdf',
+    href: '/images/CSP Report files.rar',
     isFile: true,
   },
   {
