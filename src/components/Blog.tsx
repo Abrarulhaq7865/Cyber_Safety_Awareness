@@ -55,7 +55,7 @@ const articles = [
     image: 'https://images.pexels.com/photos/8363049/pexels-photo-8363049.jpeg?auto=compress&cs=tinysrgb&w=400',
     excerpt: 'Elderly Indians are the most targeted by cyber criminals. This family-friendly guide helps you protect your parents and grandparents from online scams.',
     tags: ['Senior Citizens', 'Family', 'Awareness'],
-    url: 'https://isea.gov.in/Senior-Citizens', // Specialized ISEA Senior Citizen security deployment manual
+    url: 'https://infosecawareness.in/', // Specialized ISEA Senior Citizen security deployment manual
   },
   {
     id: 6,
