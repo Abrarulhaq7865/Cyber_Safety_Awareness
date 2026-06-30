@@ -6,7 +6,7 @@ const articles = [
     id: 1,
     title: {
       en: 'The Rise of AI Voice Scams in India: How to Protect Yourself',
-      te: 'భారతదేశంలో AI వాయిస్ స్కామ్‌ల పెరుగుదల: మిమ్మల్ని మీరు ఎలా రక్షించుకోవ�[...]'
+      te: 'భారతదేశంలో AI వాయిస్ స్కామ్‌ల పెరుగుదల: మిమ్మల్ని మీరు ఎలా రక్షించుకో�[...]'
     },
     category: { en: 'AI Scams', te: 'AI స్కాములు' },
     date: 'June 10, 2026',
@@ -14,11 +14,11 @@ const articles = [
     image: 'https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=400',
     excerpt: {
       en: "AI-generated voice clones can now replicate anyone's voice with just 3 seconds of audio. Here's how criminals are using this technology.",
-      te: 'AI-ఉత్పత్తి వాయిస్ క్లోన్లు కేవలం 3 సెకన్ల ఆడియోతో ఎవరి వాయిస్‌నైనా అను��[...]'
+      te: 'AI-ఉత్పత్తి వాయిస్ క్లోన్లు కేవలం 3 సెకన్ల ఆడియోతో ఎవరి వాయిస్‌నైనా అన�[...]'
     },
     content: {
-      en: "AI-generated voice cloning technology has reached an alarming level of accuracy. Scammers scrape a target's voice profile from public social media videos or short phone calls. Using basic t[...]",
-      te: "AI-వాయిస్ క్లోనింగ్ టెక్నాలజీ భయంకరమైన రీతిలో ఎదుగుతోంది. మోసగాళ్లు సో�[...]"
+      en: "AI-generated voice cloning technology has reached an alarming level of accuracy. Scammers scrape a target's voice profile from public social media videos or short phone calls. Using bas[...]
+      te: "AI-వాయిస్ క్లోనింగ్ టెక్నాలజీ భయంకరమైన రీతిలో ఎదుగుతోంది. మోసగాళ్లు స[...]
     },
     tags: ['AI', 'Voice Clone', 'Fraud'],
   },
@@ -34,11 +34,11 @@ const articles = [
     image: 'https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=400',
     excerpt: {
       en: 'UPI fraud cases have increased by 120% in rural areas. This guide covers every aspect of safe digital payments.',
-      te: 'గ్రామీణ ప్రాంతాల్లో UPI మోసాల కేసులు 120% పెరిగాయి. ఈ గైడ్ డిజిటల్ చెల్లింప[...]'
+      te: 'గ్రామీణ ప్రాంతాల్లో UPI మోసాల కేసులు 120% పెరిగాయి. ఈ గైడ్ డిజిటల్ చెల్లి��[...]'
     },
     content: {
-      en: "UPI transaction interfaces are exceptionally safe, but fraudsters manipulate psychology to execute thefts. The most common attack vector is the 'Receive Money Request' scam, where attackers[...]",
-      te: "UPI పేమెంట్స్ చాలా సురక్షితమైనవి, కానీ మోసగాళ్లు మన అజ్ఞానాన్ని వాడుకుం[...]"
+      en: "UPI transaction interfaces are exceptionally safe, but fraudsters manipulate psychology to execute thefts. The most common attack vector is the 'Receive Money Request' scam, where attac[...]
+      te: "UPI పేమెంట్స్ చాలా సురక్షితమైనవి, కానీ మోసగాళ్లు మన అజ్ఞానాన్ని వాడుక��[...]'
     },
     tags: ['UPI', 'Payments', 'Rural'],
   }
@@ -75,7 +75,7 @@ export default function Blog({ isTelugu }: BlogProps) {
   const lang = isTelugu ? 'te' : 'en';
 
   const categories = isTelugu 
-    ? ['అన్నీ', 'AI స్కాములు', 'UPI భద్రత', 'తాజా ముప్పులు', 'ఆన్‌లైన్ ప్రైవసీ', 'డిジナల్ అక్[...]'
+    ? ['అన్నీ', 'AI స్కాములు', 'UPI భద్రత', 'తాజా ముప్పులు', 'ఆన్‌లైన్ ప్రైవసీ', 'డిジనల్ అ��[...]'
     : ['All', 'AI Scams', 'UPI Safety', 'Latest Threats', 'Online Privacy', 'Digital Literacy'];
 
   const filtered = articles.filter(a => {
@@ -121,7 +121,7 @@ export default function Blog({ isTelugu }: BlogProps) {
               onChange={e => setSearchTerm(e.target.value)}
               placeholder={isTelugu ? "వ్యాసాలను శోధించండి..." : "Search articles..."}
               aria-label="Search articles"
-              className="w-full bg-cyber-card border border-cyber-border/50 rounded-lg pl-10 pr-4 py-2.5 text-sm text-cyber-text placeholder:text-cyber-textDim focus:outline-none focus:border-cyber-pr[...]"
+              className="w-full bg-cyber-card border border-cyber-border/50 rounded-lg pl-10 pr-4 py-2.5 text-sm text-cyber-text placeholder:text-cyber-textDim focus:outline-none focus:border-cyb[...]"
             />
           </div>
           <div className="flex gap-2 overflow-x-auto pb-1">
@@ -202,21 +202,22 @@ export default function Blog({ isTelugu }: BlogProps) {
                       ))}
                     </div>
 
-                    {/* UPDATED: if there's a category link, open it; otherwise open modal */}
-                    <button 
-                      onClick={() => {
-                        const link = categoryLinks[article.category.en];
-                        if (link) {
-                          // open the category resource in a new tab
-                          window.open(link, '_blank', 'noopener,noreferrer');
-                        } else {
+                    {/* UPDATED: use an anchor so browsers treat it like a normal link; fall back to modal when no category resource */}
+                    <a
+                      href={categoryLinks[article.category.en] || '#'}
+                      target={categoryLinks[article.category.en] ? '_blank' : undefined}
+                      rel={categoryLinks[article.category.en] ? 'noopener noreferrer' : undefined}
+                      onClick={(e) => {
+                        // If there is no external link for this category, prevent navigation and open modal
+                        if (!categoryLinks[article.category.en]) {
+                          e.preventDefault();
                           setSelectedArticle(article);
                         }
                       }}
                       className="flex items-center gap-1 text-xs text-cyber-primary hover:gap-2 transition-all font-semibold"
                     >
                       {isTelugu ? 'చదవండి' : 'Read'} <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                    </a>
                   </div>
                 </div>
               );
@@ -271,7 +272,7 @@ export default function Blog({ isTelugu }: BlogProps) {
               {/* Footer Safety Notice */}
               <div className="p-4 border-t border-cyber-border/30 bg-cyber-bg/40 flex items-center gap-2 text-xs text-cyber-primary shrink-0">
                 <ShieldAlert className="w-4 h-4 shrink-0" />
-                <span>{isTelugu ? 'సురక్షితంగా ఉండండి • సైబర్ క్రైమ్ హెల్ప్‌లైన్: 1930' : 'Stay Alert • Secure your details • Indian Cybercrime Helpline: 1930'}</span>
+                <span>{isTelugu ? 'సురక్షితంగా ఉండండి • సైబర్ క్రైమ్ హెల్ప్‌లైన్: 1930' : 'Stay Alert • Secure yo[...]'}
               </div>
 
             </div>
