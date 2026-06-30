@@ -1,6 +1,4 @@
 import { useState, useEffect } from 'react';
-import ScamAlertBanner from './components/ScamAlertBanner';
-import './components/ScamAlertBanner';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import AboutProject from './components/AboutProject';
@@ -28,7 +26,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-cyber-bg text-cyber-text overflow-x-hidden">
-      <ScamAlertBanner isTelugu={isTelugu} />
       <Navbar isTelugu={isTelugu} setIsTelugu={setIsTelugu} />
       <main>
         <Hero isTelugu={isTelugu} />
