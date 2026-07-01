@@ -4,7 +4,7 @@ import { Shield, Menu, X, Phone } from 'lucide-react';
 const navLinks = [
   { href: '#about', label: 'About', labelTe: 'గురించి' },
   { href: '#threats', label: 'Threats', labelTe: 'ముప్పులు' },
-  { href: '#tips', label: 'Tips', labelTe: 'చిтకాలు' },
+  { href: '#tips', label: 'Tips', labelTe: 'చిట్కాలు' }, // Fixed a tiny typo in the Telugu script here
   { href: '#quiz', label: 'Quiz', labelTe: 'క్విజ్' },
   { href: '#report', label: 'Report', labelTe: 'నివేదించు' },
   { href: '#contact', label: 'Contact', labelTe: 'సంప్రదించు' },
@@ -40,20 +40,19 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
             <Shield className="w-5 h-5 text-cyber-primary" />
           </div>
           <div className="hidden sm:block">
-            {/* CHANGED: Boosted logo text visibility to bright white */}
             <div className="text-sm font-bold text-white leading-tight">CyberSafe</div>
             <div className="text-[10px] text-white/90 leading-tight">Awareness Portal</div>
           </div>
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1">
+        <div className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              /* CHANGED: Swapped text-cyber-textMuted to text-white for bright readability */
-              className="px-3 py-1.5 text-sm text-white hover:text-cyber-primary transition-colors rounded-md hover:bg-cyber-primary/5"
+              /* CHANGED: Scaled up padding and font size to make buttons noticeably bigger, and locked text color to pure bright white */
+              className="px-4 py-2 text-base md:text-lg font-bold text-white hover:text-white transition-colors rounded-md hover:bg-white/10"
             >
               {isTelugu ? link.labelTe : link.label}
             </a>
@@ -65,7 +64,6 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
           {/* Telugu Toggle */}
           <button
             onClick={() => setIsTelugu(!isTelugu)}
-            /* CHANGED: Set text to bright white across active and inactive states */
             className={`px-3 py-1.5 rounded-md text-xs font-semibold border transition-all duration-200 ${
               isTelugu
                 ? 'bg-cyber-primary/10 border-cyber-primary/40 text-white'
@@ -79,7 +77,6 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
           {/* Emergency Helpline */}
           <a
             href="tel:1930"
-            /* CHANGED: Modified text color from text-cyber-error to text-white inside the red alert box */
             className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-md bg-cyber-error/10 border border-cyber-error/30 text-white text-xs font-bold hover:bg-cyber-error/15 transition-colors"
           >
             <Phone className="w-3.5 h-3.5 text-white" />
@@ -97,7 +94,7 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer Container */}
+      {/* Mobile Menu Drawer */}
       {mobileOpen && (
         <div className="md:hidden bg-cyber-bg/98 backdrop-blur-md border-b border-cyber-border/50">
           <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
@@ -106,15 +103,14 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                /* CHANGED: Set mobile nav links color text to white */
-                className="px-4 py-3 text-sm text-white hover:text-cyber-primary hover:bg-cyber-primary/5 rounded-lg transition-colors"
+                /* CHANGED: Made buttons big and pure white in mobile responsive view as well */
+                className="px-4 py-3 text-base font-bold text-white hover:text-cyber-primary hover:bg-cyber-primary/5 rounded-lg transition-colors"
               >
                 {isTelugu ? link.labelTe : link.label}
               </a>
             ))}
             <a
               href="tel:1930"
-              /* CHANGED: Swapped text color to clear bright white */
               className="flex items-center gap-2 px-4 py-3 mt-2 rounded-lg bg-cyber-error/10 border border-cyber-error/30 text-white text-sm font-bold"
             >
               <Phone className="w-4 h-4 text-white" />
