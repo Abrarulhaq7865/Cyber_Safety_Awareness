@@ -40,8 +40,8 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
             <Shield className="w-5 h-5 text-cyber-primary" />
           </div>
           <div className="hidden sm:block">
-            <div className="text-sm font-bold text-white leading-tight">CyberSafe</div>
-            <div className="text-[10px] text-white/90 leading-tight">Awareness Portal</div>
+            <div className="text-sm font-bold text-white leading-tight">CyberAware</div>
+            <div className="text-[10px] text-white/90 leading-tight">Portal</div>
           </div>
         </a>
 
