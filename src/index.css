@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -7,155 +7,225 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #020617;
   }
 
   body {
-    @apply bg-cyber-bg text-cyber-text font-sans;
-    background-color: #050d1a;
+    @apply text-cyber-text font-sans antialiased;
+    /* Upgraded from flat #050d1a to an ultra-premium, absolute deep cosmic void */
+    background-color: #020617;
+    position: relative;
+    overflow-x: hidden;
+    min-h-screen;
   }
 
+  /* --- WORLD-CLASS 3D AMBIENT AURORA GLOWS --- */
+  /* Leverages hardware-accelerated GPU layers to create organic floating security clouds behind your site text */
+  body::before {
+    content: '';
+    position: fixed;
+    top: -10%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+    filter: blur(80px);
+    z-index: -2;
+    pointer-events: none;
+    animation: cyberFloat 25s infinite ease-in-out;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    bottom: -10%;
+    right: -10%;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0, 255, 136, 0.05) 0%, transparent 70%);
+    filter: blur(100px);
+    z-index: -2;
+    pointer-events: none;
+    animation: cyberFloat 30s infinite ease-in-out alternate;
+    animation-delay: -5s;
+  }
+
+  /* --- CUSTOM STREAMING APPARATUS SCROLLBAR --- */
   * {
     scrollbar-width: thin;
-    scrollbar-color: rgba(0, 212, 255, 0.3) rgba(10, 22, 40, 0.5);
+    scrollbar-color: rgba(0, 212, 255, 0.25) rgba(2, 6, 23, 0.7);
   }
 
   *::-webkit-scrollbar {
     width: 6px;
+    height: 6px;
   }
 
   *::-webkit-scrollbar-track {
-    background: rgba(10, 22, 40, 0.5);
+    background: #020617;
   }
 
   *::-webkit-scrollbar-thumb {
-    background: rgba(0, 212, 255, 0.3);
-    border-radius: 3px;
+    background: linear-gradient(to bottom, rgba(0, 212, 255, 0.3), rgba(0, 102, 255, 0.3));
+    border-radius: 20px;
+    border: 1px solid rgba(2, 6, 23, 0.5);
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 212, 255, 0.6);
+    background: linear-gradient(to bottom, #00d4ff, #0066ff);
   }
 }
 
 @layer components {
+  /* --- UPGRADED PREMIUM TECH CARDS WITH GLOW LAYERS --- */
   .glass-card {
-    @apply bg-cyber-card/80 backdrop-blur-md border border-cyber-border/50 rounded-xl;
-    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(0, 212, 255, 0.08);
+    @apply bg-slate-950/60 backdrop-blur-xl border border-slate-800/60 rounded-xl;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 
+                0 0 0 1px rgba(255, 255, 255, 0.03);
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-300;
+    @apply glass-card transition-all duration-300 ease-out;
   }
 
   .glass-card-hover:hover {
-    @apply border-cyber-primary/30 bg-cyber-cardHover/80;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0, 212, 255, 0.1);
-    transform: translateY(-2px);
+    @apply border-cyber-primary/40 bg-slate-900/50;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.8), 
+                0 0 25px rgba(0, 212, 255, 0.15),
+                0 0 0 1px rgba(0, 212, 255, 0.2);
+    transform: translateY(-4px) scale(1.01);
   }
 
+  /* --- ACTIVE INTERACTIVE ACTIONS --- */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm
-      bg-cyber-primary text-cyber-bg transition-all duration-300;
+      bg-cyber-primary text-slate-950 transition-all duration-300 relative overflow-hidden shadow-lg shadow-cyber-primary/20;
   }
 
   .btn-primary:hover {
     @apply bg-cyber-primaryDark;
-    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
-    transform: translateY(-1px);
+    box-shadow: 0 0 25px rgba(0, 212, 255, 0.5);
+    transform: translateY(-2px);
   }
 
   .btn-outline {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm
-      border border-cyber-primary/50 text-cyber-primary transition-all duration-300;
+      border border-cyber-primary/40 text-cyber-primary bg-transparent transition-all duration-300;
   }
 
   .btn-outline:hover {
     @apply bg-cyber-primary/10 border-cyber-primary;
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+    transform: translateY(-1px);
   }
 
+  /* --- HIGH-CONTRAST DATA PACKETS & BADGES --- */
   .section-title {
-    @apply text-3xl md:text-4xl font-bold text-cyber-text;
+    @apply text-3xl md:text-4xl font-bold tracking-tight text-white;
   }
 
   .section-subtitle {
-    @apply text-cyber-textMuted text-lg leading-relaxed;
+    @apply text-slate-400 text-lg leading-relaxed font-normal;
   }
 
   .cyber-badge {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-      bg-cyber-primary/10 text-cyber-primary border border-cyber-primary/20;
+      bg-cyber-primary/10 text-cyber-primary border border-cyber-primary/30 shadow-sm shadow-cyber-primary/5;
   }
 
   .cyber-badge-green {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-      bg-cyber-accent/10 text-cyber-accent border border-cyber-accent/20;
+      bg-cyber-accent/10 text-cyber-accent border border-cyber-accent/30 shadow-sm shadow-cyber-accent/5;
   }
 
   .cyber-badge-red {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-      bg-cyber-error/10 text-cyber-error border border-cyber-error/20;
+      bg-cyber-error/10 text-cyber-error border border-cyber-error/30 shadow-sm shadow-cyber-error/5;
   }
 
   .cyber-badge-warning {
     @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold
-      bg-cyber-warning/10 text-cyber-warning border border-cyber-warning/20;
+      bg-cyber-warning/10 text-cyber-warning border border-cyber-warning/30 shadow-sm shadow-cyber-warning/5;
   }
 
+  /* --- NEON SIGNATURE REPOSITORIES --- */
   .neon-text {
     color: #00d4ff;
-    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5), 0 0 20px rgba(0, 212, 255, 0.3);
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.6), 0 0 25px rgba(0, 212, 255, 0.2);
   }
 
   .neon-text-green {
     color: #00ff88;
-    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5), 0 0 20px rgba(0, 255, 136, 0.3);
+    text-shadow: 0 0 12px rgba(0, 255, 136, 0.6), 0 0 25px rgba(0, 255, 136, 0.2);
   }
 
+  /* --- DYNAMIC LIVE ANIMATED DATA GRID BACKGROUND --- */
+  /* Generates an infinitely streaming cyber matrix grid down your viewport */
   .cyber-grid-bg {
-    background-image: linear-gradient(rgba(0, 212, 255, 0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0, 212, 255, 0.03) 1px, transparent 1px);
-    background-size: 50px 50px;
+    position: relative;
+    background-image: 
+      linear-gradient(rgba(0, 212, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 212, 255, 0.02) 1px, transparent 1px);
+    background-size: 60px 60px;
+    animation: matrixStream 60s linear infinite;
   }
 
+  .cyber-grid-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 30%, transparent 20%, #020617 85%);
+    pointer-events: none;
+  }
+
+  /* --- HARDENED TECHNICAL ASSETS --- */
   .progress-bar {
-    @apply h-2 rounded-full bg-cyber-border overflow-hidden;
+    @apply h-2.5 rounded-full bg-slate-900 overflow-hidden border border-slate-800/50;
   }
 
   .progress-fill {
     @apply h-full rounded-full transition-all duration-1000 ease-out;
-    background: linear-gradient(90deg, #00d4ff, #0066ff);
+    background: linear-gradient(90deg, #00d4ff, #0066ff, #00ff88);
+    background-size: 200% 100%;
+    animation: gradientShift 4s linear infinite;
   }
 
   .threat-card {
-    @apply glass-card p-5 cursor-pointer transition-all duration-300;
+    @apply glass-card p-5 cursor-pointer transition-all duration-300 border border-slate-800/80;
   }
 
   .threat-card:hover {
-    @apply border-cyber-error/40;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 68, 102, 0.1);
-    transform: translateY(-2px);
+    @apply border-cyber-error/50 bg-slate-900/40;
+    box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.8), 
+                0 0 25px rgba(255, 68, 102, 0.15),
+                0 0 0 1px rgba(255, 68, 102, 0.2);
+    transform: translateY(-4px);
   }
 
   .quiz-option {
-    @apply w-full text-left p-4 rounded-lg border border-cyber-border/50
-      text-cyber-textMuted transition-all duration-200 cursor-pointer;
-    background: rgba(10, 22, 40, 0.5);
+    @apply w-full text-left p-4 rounded-xl border border-slate-800
+      text-slate-400 transition-all duration-200 cursor-pointer font-medium;
+    background: rgba(15, 23, 42, 0.6);
   }
 
   .quiz-option:hover:not(:disabled) {
-    @apply border-cyber-primary/50 text-cyber-text;
-    background: rgba(0, 212, 255, 0.05);
+    @apply border-cyber-primary/60 text-white shadow-md;
+    background: rgba(0, 212, 255, 0.04);
+    box-shadow: 0 0 15px rgba(0, 212, 255, 0.05);
   }
 
   .quiz-option.correct {
-    @apply border-cyber-accent/70 text-cyber-accent;
-    background: rgba(0, 255, 136, 0.08);
+    @apply border-cyber-accent/80 text-cyber-accent font-semibold;
+    background: rgba(0, 255, 136, 0.06);
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.1);
   }
 
   .quiz-option.incorrect {
-    @apply border-cyber-error/70 text-cyber-error;
-    background: rgba(255, 68, 102, 0.08);
+    @apply border-cyber-error/80 text-cyber-error font-semibold;
+    background: rgba(255, 68, 102, 0.06);
+    box-shadow: 0 0 20px rgba(255, 68, 102, 0.1);
   }
 
   .timeline-item {
@@ -165,7 +235,7 @@
   .timeline-item::before {
     content: '';
     @apply absolute left-3 top-8 bottom-0 w-0.5;
-    background: linear-gradient(to bottom, rgba(0, 212, 255, 0.5), rgba(0, 212, 255, 0.1));
+    background: linear-gradient(to bottom, #00d4ff 0%, rgba(0, 102, 255, 0.4) 50%, transparent 100%);
   }
 
   .timeline-item:last-child::before {
@@ -175,37 +245,55 @@
   .typing-cursor::after {
     content: '|';
     animation: blink 1s step-end infinite;
-  }
-
-  @keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+    @apply text-cyber-primary font-bold ml-1;
   }
 }
 
 @layer utilities {
   .text-gradient {
-    background: linear-gradient(135deg, #00d4ff, #0066ff);
+    background: linear-gradient(135deg, #ffffff 10%, #00d4ff 60%, #0066ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .text-gradient-green {
-    background: linear-gradient(135deg, #00ff88, #00d4ff);
+    background: linear-gradient(135deg, #ffffff 20%, #00ff88 70%, #00d4ff 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-glass {
-    background: rgba(10, 22, 40, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background: rgba(2, 6, 23, 0.75);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
   }
 
   .border-glow {
-    border-color: rgba(0, 212, 255, 0.5);
-    box-shadow: 0 0 15px rgba(0, 212, 255, 0.2);
+    border-color: rgba(0, 212, 255, 0.4);
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.15);
   }
+}
+
+/* --- REVOLUTIONARY GPU ANIMATION MAPS --- */
+@keyframes cyberFloat {
+  0%, 100% { transform: translate(0px, 0px) scale(1); }
+  50% { transform: translate(60px, -40px) scale(1.15); }
+}
+
+@keyframes matrixStream {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 1000px; }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
