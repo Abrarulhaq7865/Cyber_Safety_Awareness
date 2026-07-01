@@ -18,16 +18,12 @@ interface NavbarProps {
 export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  
-  // NEW State: Tracks which layout section button is currently clicked/active
   const [activeHash, setActiveHash] = useState('');
 
   useEffect(() => {
-    // Set initial active state based on current browser address bar hash on load
     setActiveHash(window.location.hash || '#home');
 
     const handleScroll = () => setScrolled(window.scrollY > 20);
-    
     const handleHashChange = () => {
       setActiveHash(window.location.hash || '#home');
     };
@@ -45,24 +41,24 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
     <nav
       className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-cyber-bg/95 backdrop-blur-md border-b border-cyber-border/50 shadow-lg shadow-black/20'
+          ? 'bg-slate-950/90 backdrop-blur-md border-b border-white/10 shadow-lg shadow-black/40'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
         <a href="#home" onClick={() => setActiveHash('#home')} className="flex items-center gap-2.5 group">
-          <div className="w-10 h-10 rounded-lg bg-cyber-primary/10 border border-cyber-primary/30 flex items-center justify-center group-hover:border-cyber-primary/60 transition-colors">
-            <Shield className="w-5 h-5 text-cyber-primary" />
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-b from-cyan-400 to-blue-500 flex items-center justify-center shadow-[0_0_15px_rgba(34,211,238,0.3)] group-hover:scale-105 transition-transform">
+            <Shield className="w-5 h-5 text-slate-950 font-bold" />
           </div>
           <div className="hidden sm:block">
-            <div className="text-base font-bold text-cyber-text leading-tight">CyberSafe</div>
-            <div className="text-xs text-cyber-textMuted leading-tight">Awareness Portal</div>
+            <div className="text-base font-black text-white tracking-wide leading-tight">CyberSafe</div>
+            <div className="text-xs font-medium text-cyan-400 tracking-wider leading-tight">Awareness Portal</div>
           </div>
         </a>
 
-        {/* Desktop Nav - Bounded text sizes up from text-sm to text-base */}
-        <div className="hidden md:flex items-center gap-1.5">
+        {/* Desktop Nav - Shiny White & Premium Gradient Adaptations */}
+        <div className="hidden md:flex items-center gap-2">
           {navLinks.map((link) => {
             const isActive = activeHash === link.href;
             return (
@@ -70,10 +66,10 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
                 key={link.href}
                 href={link.href}
                 onClick={() => setActiveHash(link.href)}
-                className={`px-3.5 py-2 text-base font-semibold transition-all rounded-md ${
+                className={`px-4 py-2 text-base font-bold transition-all duration-200 rounded-md tracking-wide ${
                   isActive
-                    ? 'bg-cyber-primary/15 text-cyber-primary shadow-sm border border-cyber-primary/20 font-bold' // Distinct Highlight Color Variant
-                    : 'text-cyber-textMuted hover:text-cyber-primary hover:bg-cyber-primary/5'
+                    ? 'bg-gradient-to-b from-white/25 to-white/5 text-white border border-white/40 shadow-[0_0_15px_rgba(255,255,255,0.25)] backdrop-blur-md scale-105' // Shiny White Active State
+                    : 'text-slate-300 hover:text-white hover:bg-white/10'
                 }`}
               >
                 {isTelugu ? link.labelTe : link.label}
@@ -82,33 +78,33 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
           })}
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center gap-2.5">
-          {/* Telugu Toggle - Scaled text metrics from text-xs to text-sm */}
+        {/* Actions Suite */}
+        <div className="flex items-center gap-3">
+          {/* Telugu Toggle - Pure Premium Bright Solid White Gradient */}
           <button
             onClick={() => setIsTelugu(!isTelugu)}
-            className={`px-3.5 py-2 rounded-md text-sm font-bold border transition-all duration-200 ${
+            className={`px-4 py-2 rounded-md text-sm font-black tracking-wider transition-all duration-300 shadow-md ${
               isTelugu
-                ? 'bg-cyber-primary/10 border-cyber-primary/40 text-cyber-primary'
-                : 'border-cyber-border/50 text-cyber-textMuted hover:border-cyber-primary/30 hover:text-cyber-text'
+                ? 'bg-gradient-to-b from-white to-slate-200 text-slate-950 shadow-[0_0_20px_rgba(255,255,255,0.4)] border-none scale-105' // Shiny White Active
+                : 'bg-slate-900/80 border border-white/20 text-white hover:border-white/50 hover:bg-slate-800'
             }`}
             title="Toggle Telugu language"
           >
             {isTelugu ? 'EN' : 'తె'}
           </button>
 
-          {/* Emergency Helpline - Bounded text sizing up from text-xs to text-sm with comfort padding changes */}
+          {/* Emergency Helpline - High-Contrast Glossy Safety Crimson Gradient */}
           <a
             href="tel:1930"
-            className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-md bg-cyber-error/10 border border-cyber-error/30 text-cyber-error text-sm font-extrabold hover:bg-cyber-error/15 transition-all shadow-md active:scale-95"
+            className="hidden sm:flex items-center gap-2 px-4.5 py-2 rounded-md bg-gradient-to-r from-red-500 via-rose-500 to-red-600 text-white text-sm font-black tracking-wide shadow-[0_0_20px_rgba(239,68,68,0.45)] hover:shadow-[0_0_25px_rgba(239,68,68,0.65)] hover:scale-105 active:scale-95 transition-all duration-200 border border-red-400/30"
           >
-            <Phone className="w-4 h-4" />
+            <Phone className="w-4 h-4 animate-pulse" />
             1930
           </a>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu Trigger */}
           <button
-            className="md:hidden p-2 text-cyber-textMuted hover:text-cyber-text transition-colors"
+            className="md:hidden p-2 text-slate-300 hover:text-white transition-colors"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Toggle menu"
           >
@@ -117,10 +113,10 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
         </div>
       </div>
 
-      {/* Mobile Menu Open Drawer container */}
+      {/* Mobile Menu Sidebar Drawer */}
       {mobileOpen && (
-        <div className="md:hidden bg-cyber-bg/98 backdrop-blur-md border-b border-cyber-border/50">
-          <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1.5">
+        <div className="md:hidden bg-slate-950/98 backdrop-blur-xl border-b border-white/10">
+          <div className="max-w-7xl mx-auto px-4 py-5 flex flex-col gap-2">
             {navLinks.map((link) => {
               const isActive = activeHash === link.href;
               return (
@@ -131,10 +127,10 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
                     setActiveHash(link.href);
                     setMobileOpen(false);
                   }}
-                  className={`px-4 py-3 text-base font-semibold rounded-lg transition-colors ${
+                  className={`px-4 py-3 text-base font-bold rounded-lg transition-all ${
                     isActive
-                      ? 'bg-cyber-primary/15 text-cyber-primary font-bold border-l-4 border-cyber-primary pl-3'
-                      : 'text-cyber-textMuted hover:text-cyber-primary hover:bg-cyber-primary/5'
+                      ? 'bg-gradient-to-r from-white/20 to-white/5 text-white border border-white/30 pl-5 font-black shadow-inner'
+                      : 'text-slate-300 hover:text-white hover:bg-white/5'
                   }`}
                 >
                   {isTelugu ? link.labelTe : link.label}
@@ -143,7 +139,7 @@ export default function Navbar({ isTelugu, setIsTelugu }: NavbarProps) {
             })}
             <a
               href="tel:1930"
-              className="flex items-center justify-center gap-2 px-4 py-3.5 mt-2 rounded-lg bg-cyber-error/10 border border-cyber-error/30 text-cyber-error text-base font-extrabold"
+              className="flex items-center justify-center gap-2 px-4 py-3.5 mt-3 rounded-lg bg-gradient-to-r from-red-500 to-rose-600 text-white text-base font-black shadow-[0_0_20px_rgba(239,68,68,0.3)]"
             >
               <Phone className="w-4 h-4" />
               Emergency Helpline: 1930
