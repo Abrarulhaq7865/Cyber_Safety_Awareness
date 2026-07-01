@@ -12,15 +12,14 @@
 
   body {
     @apply text-cyber-text font-sans antialiased;
-    /* Upgraded from flat #050d1a to an ultra-premium, absolute deep cosmic void */
+    /* Deep cosmic void background definition */
     background-color: #020617;
     position: relative;
     overflow-x: hidden;
-    min-h-screen;
+    min-height: 100vh; /* FIXED: Swapped from utility string to valid PostCSS property */
   }
 
-  /* --- WORLD-CLASS 3D AMBIENT AURORA GLOWS --- */
-  /* Leverages hardware-accelerated GPU layers to create organic floating security clouds behind your site text */
+  /* --- HARDWARE-ACCELERATED 3D AMBIENT BACKGROUND GLOWS --- */
   body::before {
     content: '';
     position: fixed;
@@ -52,7 +51,7 @@
     animation-delay: -5s;
   }
 
-  /* --- CUSTOM STREAMING APPARATUS SCROLLBAR --- */
+  /* --- SEAMLESS HIGH-TECH SCROLLBAR MECHANICS --- */
   * {
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 212, 255, 0.25) rgba(2, 6, 23, 0.7);
@@ -79,7 +78,7 @@
 }
 
 @layer components {
-  /* --- UPGRADED PREMIUM TECH CARDS WITH GLOW LAYERS --- */
+  /* --- PREMIUM TECH DESIGN CARDS --- */
   .glass-card {
     @apply bg-slate-950/60 backdrop-blur-xl border border-slate-800/60 rounded-xl;
     box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.7), 
@@ -98,7 +97,7 @@
     transform: translateY(-4px) scale(1.01);
   }
 
-  /* --- ACTIVE INTERACTIVE ACTIONS --- */
+  /* --- BUTTON CONTROLS AND INTERACTION HOOKS --- */
   .btn-primary {
     @apply inline-flex items-center gap-2 px-6 py-3 rounded-lg font-semibold text-sm
       bg-cyber-primary text-slate-950 transition-all duration-300 relative overflow-hidden shadow-lg shadow-cyber-primary/20;
@@ -121,7 +120,7 @@
     transform: translateY(-1px);
   }
 
-  /* --- HIGH-CONTRAST DATA PACKETS & BADGES --- */
+  /* --- DATA PACKET HIGH-CONTRAST TYPOGRAPHY --- */
   .section-title {
     @apply text-3xl md:text-4xl font-bold tracking-tight text-white;
   }
@@ -150,7 +149,7 @@
       bg-cyber-warning/10 text-cyber-warning border border-cyber-warning/30 shadow-sm shadow-cyber-warning/5;
   }
 
-  /* --- NEON SIGNATURE REPOSITORIES --- */
+  /* --- GLOW TEXT MODIFIERS --- */
   .neon-text {
     color: #00d4ff;
     text-shadow: 0 0 12px rgba(0, 212, 255, 0.6), 0 0 25px rgba(0, 212, 255, 0.2);
@@ -161,8 +160,7 @@
     text-shadow: 0 0 12px rgba(0, 255, 136, 0.6), 0 0 25px rgba(0, 255, 136, 0.2);
   }
 
-  /* --- DYNAMIC LIVE ANIMATED DATA GRID BACKGROUND --- */
-  /* Generates an infinitely streaming cyber matrix grid down your viewport */
+  /* --- STREAMING DIGITAL INTERACTIVE GRID --- */
   .cyber-grid-bg {
     position: relative;
     background-image: 
@@ -180,7 +178,7 @@
     pointer-events: none;
   }
 
-  /* --- HARDENED TECHNICAL ASSETS --- */
+  /* --- APP SECURITY INFRASTRUCTURE MODULES --- */
   .progress-bar {
     @apply h-2.5 rounded-full bg-slate-900 overflow-hidden border border-slate-800/50;
   }
@@ -276,7 +274,7 @@
   }
 }
 
-/* --- REVOLUTIONARY GPU ANIMATION MAPS --- */
+/* --- OPTIMIZED HARDWARE ANIMATION TIMELINES --- */
 @keyframes cyberFloat {
   0%, 100% { transform: translate(0px, 0px) scale(1); }
   50% { transform: translate(60px, -40px) scale(1.15); }
